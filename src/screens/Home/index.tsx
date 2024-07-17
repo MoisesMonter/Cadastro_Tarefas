@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { FlatList } from "react-native";
 import { Platform } from "react-native";
-import { Container, Header, Centralized_items, Header_Text, Header_Text_intern, Header_Title, Footer, FooterView, FooterText, ScrollViewed} from './styles';
-import { Body,Body_Text, CheckList, Centralized_list, CheckBox_check, CheckBox_discheck,Body_Text_o } from "./styles";
+import { Container, Header, Centralized_items, Header_Text, Header_Text_intern, Header_Title, ScrollViewed, Body_View_Text} from './styles';
+import { Body,Body_Text, CheckList, Centralized_list, CheckBox_check, CheckBox_discheck,Body_Text_o,Button_Icon } from "./styles";
 import { ListItems, ListProps} from './types';
 import Icon from 'react-native-vector-icons/AntDesign'
+import TIcon from 'react-native-vector-icons/EvilIcons'
 
 import { Foooter } from "../../components/molecules/footer";
 type HomeProps = {
@@ -44,7 +45,15 @@ export function Home(props: HomeProps) {
                     ) : (
                         <CheckBox_discheck onPress={() => toggleCheckbox(index)} />
                     )}
-                     {item.is_active? <Body_Text_o>{item.title}</Body_Text_o>:<Body_Text>{item.title}</Body_Text>}
+                    <Body_View_Text>
+                    {item.is_active? <Body_Text_o>{item.title}</Body_Text_o>:<Body_Text>{item.title}</Body_Text>}
+                    </Body_View_Text>
+                    <Button_Icon>
+                    
+                     <TIcon size={30} name={'trash'}></TIcon>
+                    </Button_Icon>
+                     
+                    
                 </Centralized_list>
             ))}
         </CheckList>

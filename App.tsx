@@ -14,12 +14,7 @@ const Apps = styled.View`
 `;
 
 export default function App() {
-  // const [myList, setMyList] = useState<ListProps>([
-  //   { title: 'Lavar a casa', is_active: true },
-  //   { title: 'Estudar React 1 hora', is_active: false },
-  //   { title: 'Estudar Django 1 hora', is_active: true },
-  //   { title: 'Futebol as 5:50', is_active: false }
-  // ]);
+
 
   const handleOpenWeb = () => {
     const url = 'https://www.localhost.com'; // URL que você deseja abrir
@@ -36,8 +31,8 @@ export default function App() {
   ];
   return (
     <Apps>
-        <Login/>
-        {/* <Home tasks={myList} /> */}
+        {/* <Login/> */}
+        <Home tasks={myList} />
         {/* <Registration/> */}
 
         
